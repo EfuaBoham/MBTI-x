@@ -1,0 +1,20 @@
+{
+  "name": "MBTI prediction",
+  "description": "An MBTI web application for predicting personality based on a person's tweets",
+  "image": "heroku/python",
+  "repository": "https://git.heroku.com/dry-coast-64417.git",
+  "keywords": ["python", "flask" ],
+  "addons": [ "heroku-postgresql" ],
+  "env": {
+    "SECRET_KEY": {
+      "description": "The secret key for the Django application.",
+      "generator": "sdasad23423353io,msaasjsdsd"
+    }
+  },
+  "environments": {
+    "test": {
+      "scripts": {
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<!-- index.html-->
+
+{% extends "base.html" %} {% block title %}Machine Tutors-MBTI{% endblock %} {% block body %}
+<div class="jumbotron">
+    <h3 style="text-align:center">Check your Myers-Briggs personality types (MBTI)</h3>
+    <form action="/" , method="POST">
+        <div class="form-group">
+            <input class="form-control form-control-lg" type="text" placeholder="Provide your twitter handle" id="twitter_handle" name="twitter_handle">
+        </div>
+        <button type="submit" class="btn btn-primary" style="float:right">Check my personality</button>
+    </form>
+</div>
+{% if clean_data %}
+<div class="jumbotron">
+    <div class="row" style="text-align:center">
+        <h2>Our Prediction</h2>
+        <p>We are <span style="font-weight: bold;">{{confidence_level}}% </span> confident that are you an <span style="font-weight: bold;">{{predicted_personality}}</span></p>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Cleaned Tweets</h3>
+            <p style="text-align:justify">
+                {{clean_data}}
+            </p>
+
+        </div>
+        <div class="col-md-6">
+            <h3>Raw Tweets</h3>
+            <p style="text-align:justify">
+                {{raw_data}}
+            </p>
+        </div>
+    </div>
+</div>
+{% endif %} {% endblock %}
